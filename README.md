@@ -8,6 +8,6 @@ You can preview a live building of this project on `weather-browser.netlify.com`
 
 ### About this project
 
-This project has been build using stateless components, and react Hooks. it also uses Materialize for styling and request data from the OpenWEatherMap API and RestCountries.
+This project has been build using stateless components, and react Hooks. it also uses Materialize for styling and request data from the OpenWeatherMap API and RestCountries.
 
 It is hosted using netlify free service, and also uses CD.
