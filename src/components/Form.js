@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import M from 'materialize-css';
 
 const Form = ({ dataQuery }) => {
   const [searchValues, setSearchValues] = useState({
@@ -10,8 +11,8 @@ const Form = ({ dataQuery }) => {
   useEffect(() => {
     const requestAPI = async () => {
       const response = await fetch('https://restcountries.eu/rest/v2/all');
-      const values = await response.json();
-      setCountries(values);
+      setCountries(await response.json());
+      M.AutoInit();
     };
 
     requestAPI();
@@ -38,8 +39,6 @@ const Form = ({ dataQuery }) => {
       <div className="input-field col s12">
         <select onChange={handleChange} name="country">
           <option value="">Select a country</option>
-          <option value="CO">Colombia</option>
-          {/* TODO: Not rendering all options */}
           {countries.map(country => (
             <option key={country.alpha2Code} value={country.alpha2Code}>
               {country.name}
@@ -48,11 +47,12 @@ const Form = ({ dataQuery }) => {
         </select>
       </div>
       <div className="input-field col s12">
-        <input
+        <button
           type="submit"
           className="waves-effect waves-light btn-large btn-block yellow accent-4"
-          value="Get Weather"
-        />
+        >
+          Get Weather
+        </button>
       </div>
     </form>
   );
