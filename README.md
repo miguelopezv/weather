@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Site
 
-You can preview a live build of this project on [weather-browser.netlify.com](https://weather-browser.netlify.com).
+You can preview a live build of this project on [weather-browser.netlify.com](https://weather-browser.netlify.com)
 
 ### About this project
 
