@@ -62,5 +62,7 @@ input[type='text']:not(.browser-default):focus:not([readonly]) + label {
   vertical-align: super;
 }
 .btn-block {
+  color: #000;
   display: block !important;
+  width: 100%;
 }
